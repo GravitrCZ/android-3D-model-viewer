@@ -320,8 +320,8 @@ public class ModelRenderer implements GLSurfaceView.Renderer {
 
         // init variables having android context
         ContentUtils.setThreadActivity(main.getContext());
-        skyBoxes = new SkyBox[]{SkyBox.getSkyBox1(), SkyBox.getSkyBox2()};
-        skyBoxes3D = new Object3DData[skyBoxes.length];
+        //skyBoxes = new SkyBox[]{SkyBox.getSkyBox1(), SkyBox.getSkyBox2()};
+        //skyBoxes3D = new Object3DData[skyBoxes.length];
     }
 
     @Override
