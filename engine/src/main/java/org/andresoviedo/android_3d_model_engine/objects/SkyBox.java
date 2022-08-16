@@ -103,7 +103,7 @@ public class SkyBox {
      * @return
      */
     public static SkyBox getSkyBox2() {
-        getSkybox3();
+        return getSkyBox3();
     }
 
     /**
@@ -112,10 +112,10 @@ public class SkyBox {
      * @return
      */
     public static SkyBox getSkyBox1() {
-        getSkybox3();
+        return getSkyBox3();
     }
 
-    public static getSkyBox3() {
+    public static SkyBox getSkyBox3() {
         try {
             return new org.andresoviedo.android_3d_model_engine.objects.SkyBox(new URI[]{
                     URI.create(RIGHT),
