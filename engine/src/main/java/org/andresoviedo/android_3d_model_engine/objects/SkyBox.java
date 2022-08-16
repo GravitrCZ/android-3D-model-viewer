@@ -18,6 +18,12 @@ import java.net.URI;
  * https://github.com/mobialia/jmini3d
  */
 public class SkyBox {
+    public static String RIGHT;
+    public static String LEFT;
+    public static String TOP;
+    public static String BOTTOM;
+    public static String FRONT;
+    public static String BACK;
 
     private final static float VERTEX_DATA[] = {
             // positions
@@ -97,17 +103,7 @@ public class SkyBox {
      * @return
      */
     public static SkyBox getSkyBox2() {
-        try {
-            return new SkyBox(new URI[]{
-                    URI.create("android://org.andresoviedo.dddmodel2/res/drawable/posx.png"),
-                    URI.create("android://org.andresoviedo.dddmodel2/res/drawable/negx.png"),
-                    URI.create("android://org.andresoviedo.dddmodel2/res/drawable/posy.png"),
-                    URI.create("android://org.andresoviedo.dddmodel2/res/drawable/negy.png"),
-                    URI.create("android://org.andresoviedo.dddmodel2/res/drawable/posz.png"),
-                    URI.create("android://org.andresoviedo.dddmodel2/res/drawable/negz.png")});
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        getSkybox3();
     }
 
     /**
@@ -116,14 +112,18 @@ public class SkyBox {
      * @return
      */
     public static SkyBox getSkyBox1() {
+        getSkybox3();
+    }
+
+    public static getSkyBox3() {
         try {
-            return new SkyBox(new URI[]{
-                    URI.create("android://org.andresoviedo.dddmodel2/res/drawable/right.png"),
-                    URI.create("android://org.andresoviedo.dddmodel2/res/drawable/left.png"),
-                    URI.create("android://org.andresoviedo.dddmodel2/res/drawable/top.png"),
-                    URI.create("android://org.andresoviedo.dddmodel2/res/drawable/bottom.png"),
-                    URI.create("android://org.andresoviedo.dddmodel2/res/drawable/front.png"),
-                    URI.create("android://org.andresoviedo.dddmodel2/res/drawable/back.png")});
+            return new org.andresoviedo.android_3d_model_engine.objects.SkyBox(new URI[]{
+                    URI.create(RIGHT),
+                    URI.create(LEFT),
+                    URI.create(TOP),
+                    URI.create(BOTTOM),
+                    URI.create(FRONT),
+                    URI.create(BACK)});
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
