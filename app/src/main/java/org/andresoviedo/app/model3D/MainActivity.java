@@ -25,10 +25,10 @@ public class MainActivity extends Activity {
 
 
     // Custom handler: org/andresoviedo/util/android/assets/Handler.class
-    /*static {
-        System.setProperty("java.protocol.handler.pkgs", "org.andresoviedo.util.android");
+    static {
+        System.setProperty("java.protocol.handler.pkgs", BuildConfig.APPLICATION_ID);
         URL.setURLStreamHandlerFactory(new AndroidURLStreamHandlerFactory());
-    }*/
+    }
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
